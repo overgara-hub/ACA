@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BugBusters | Calidad de Software Web</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .quality-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div id="vanta-bg" class="fixed inset-0 -z-10"></div>
+    
+    <!-- Header -->
+    <header class="relative bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i data-feather="shield" class="text-indigo-600 w-8 h-8"></i>
+                    <h1 class="text-2xl font-bold gradient-text">Software de calidad</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="font-medium text-indigo-600 hover:text-indigo-800">Inicio</a>
+                    <a href="#servicios" class="font-medium text-gray-600 hover:text-indigo-600">Servicios</a>
+                    <a href="#metricas" class="font-medium text-gray-600 hover:text-indigo-600">Métricas</a>
+                    <a href="#contacto" class="font-medium text-gray-600 hover:text-indigo-600">Contacto</a>
+                </nav>
+                <button class="md:hidden focus:outline-none">
+                    <i data-feather="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Calidad de Software <span class="gradient-text">Sin Compromisos</span></h1>
+            <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-10">
+                Detectamos, analizamos y solucionamos problemas de calidad en tus aplicaciones web antes que afecten a tus usuarios.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-medium transition duration-300 transform hover:scale-105">
+                    Analizar Mi Sitio
+                </button>
+                <button class="border border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-8 py-3 rounded-lg font-medium transition duration-300">
+                    Saber Más
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Indicators -->
+    <section class="py-16 bg-white/80 backdrop-blur-sm">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Pilares de la Calidad Web</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="quality-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="zap" class="text-indigo-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Rendimiento</h3>
+                    <p class="text-gray-600">
+                        Velocidad de carga, uso eficiente de recursos y optimización para diferentes dispositivos.
+                    </p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="quality-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="lock" class="text-indigo-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Seguridad</h3>
+                    <p class="text-gray-600">
+                        Protección contra vulnerabilidades, manejo seguro de datos y cumplimiento de normativas.
+                    </p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="quality-card bg-white rounded-xl p-8 shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="user-check" class="text-indigo-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Usabilidad</h3>
+                    <p class="text-gray-600">
+                        Experiencia intuitiva, accesibilidad y diseño centrado en el usuario final.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4">Nuestros Servicios</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+                Soluciones completas para garantizar la calidad de tus aplicaciones web
+            </p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl p-8 shadow-md flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-20 h-20 bg-indigo-100 rounded-xl flex items-center justify-center">
+                            <i data-feather="search" class="text-indigo-600 w-10 h-10"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Auditoría de Calidad</h3>
+                        <p class="text-gray-600 mb-4">
+                            Análisis exhaustivo de tu aplicación web identificando problemas de rendimiento, seguridad y usabilidad.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 w-5 h-5 mr-2 mt-0.5"></i>
+                                <span>Reporte detallado de hallazgos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 w-5 h-5 mr-2 mt-0.5"></i>
+                                <span>Priorización de problemas críticos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 w-5 h-5 mr-2 mt-0.5"></i>
+                                <span>Recomendaciones específicas</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl p-8 shadow-md flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-20 h-20 bg-indigo-100 rounded-xl flex items-center justify-center">
+                            <i data-feather="code" class="text-indigo-600 w-10 h-10"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Optimización Continua</h3>
+                        <p class="text-gray-600 mb-4">
+                            Monitoreo constante e implementación de mejoras para mantener altos estándares de calidad.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 w-5 h-5 mr-2 mt-0.5"></i>
+                                <span>Integración con CI/CD</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 w-5 h-5 mr-2 mt-0.5"></i>
+                                <span>Pruebas automatizadas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 w-5 h-5 mr-2 mt-0.5"></i>
+                                <span>Alertas de regresión</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl p-8 shadow-md flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-20 h-20 bg-indigo-100 rounded-xl flex items-center justify-center">
+                            <i data-feather="shield" class="text-indigo-600 w-10 h-10"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Seguridad Web</h3>
+                        <p class="text-gray-600 mb-4">
+                            Protección contra amenazas modernas y cumplimiento de estándares de seguridad.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 w-5 h-5 mr-2 mt-0.5"></i>
+                                <span>Pruebas de penetración</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 w-5 h-5 mr-2 mt-0.5"></i>
+                                <span>Análisis de vulnerabilidades</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 w-5 h-5 mr-2 mt-0.5"></i>
+                                <span>Cumplimiento GDPR/CCPA</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-xl p-8 shadow-md flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="w-20 h-20 bg-indigo-100 rounded-xl flex items-center justify-center">
+                            <i data-feather="trending-up" class="text-indigo-600 w-10 h-10"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Experiencia de Usuario</h3>
+                        <p class="text-gray-600 mb-4">
+                            Evaluación y mejora de la interfaz para maximizar la satisfacción y conversión.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 w-5 h-5 mr-2 mt-0.5"></i>
+                                <span>Pruebas con usuarios reales</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 w-5 h-5 mr-2 mt-0.5"></i>
+                                <span>Análisis de heatmaps</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="check" class="text-green-500 w-5 h-5 mr-2 mt-0.5"></i>
+                                <span>Accesibilidad WCAG 2.1</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section id="metricas" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4">Métricas Clave de Calidad</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+                Indicadores que medimos para garantizar la excelencia de tu aplicación web
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Metric 1 -->
+                <div class="bg-indigo-50 rounded-xl p-6 text-center">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">95%</div>
+                    <h3 class="text-lg font-semibold mb-2">Tiempo Activo</h3>
+                    <p class="text-gray-600 text-sm">
+                        Porcentaje de tiempo que tu aplicación está disponible para los usuarios
+                    </p>
+                </div>
+                
+                <!-- Metric 2 -->
+                <div class="bg-indigo-50 rounded-xl p-6 text-center">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">&lt;2s</div>
+                    <h3 class="text-lg font-semibold mb-2">Carga Inicial</h3>
+                    <p class="text-gray-600 text-sm">
+                        Tiempo promedio para que la página sea completamente interactiva
+                    </p>
+                </div>
+                
+                <!-- Metric 3 -->
+                <div class="bg-indigo-50 rounded-xl p-6 text-center">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">0</div>
+                    <h3 class="text-lg font-semibold mb-2">Vulnerabilidades</h3>
+                    <p class="text-gray-600 text-sm">
+                        Problemas críticos de seguridad identificados y corregidos
+                    </p>
+                </div>
+                
+                <!-- Metric 4 -->
+                <div class="bg-indigo-50 rounded-xl p-6 text-center">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">100%</div>
+                    <h3 class="text-lg font-semibold mb-2">Accesibilidad</h3>
+                    <p class="text-gray-600 text-sm">
+                        Cumplimiento de estándares WCAG para todos los usuarios
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-8 text-white">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h3 class="text-2xl font-bold mb-4">¿Listo para mejorar la calidad de tu aplicación web?</h3>
+                    <p class="mb-6">
+                        Nuestro equipo de expertos está listo para ayudarte a alcanzar los más altos estándares de calidad.
+                    </p>
+                    <button class="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition duration-300">
+                        Solicitar Auditoría Gratis
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-indigo-600 p-10 text-white">
+                        <h2 class="text-2xl font-bold mb-6">Contacta a Nuestros Expertos</h2>
+                        <p class="mb-6">
+                            ¿Tienes preguntas sobre cómo podemos mejorar la calidad de tu aplicación web? Estamos aquí para ayudarte.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i data-feather="mail" class="w-5 h-5 mr-3 mt-0.5"></i>
+                                <span>contacto@bugbusters.dev</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="phone" class="w-5 h-5 mr-3 mt-0.5"></i>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="map-pin" class="w-5 h-5 mr-3 mt-0.5"></i>
+                                <span>Av. Calidad 123, Ciudad Digital</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-10">
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Mensaje</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg font-medium transition duration-300">
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-feather="shield" class="text-indigo-400 w-6 h-6"></i>
+                        <h3 class="text-xl font-bold">BugBusters</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Expertos en calidad de software web, ayudando a empresas a ofrecer experiencias digitales excepcionales.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Auditoría de Calidad</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Optimización Continua</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Seguridad Web</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Experiencia de Usuario</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Recursos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Guías</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Webinars</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Herramientas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                    <div class="mt-6">
+                        <button class="flex items-center text-indigo-400 hover:text-indigo-300">
+                            <i data-feather="globe" class="w-4 h-4 mr-2"></i>
+                            <span>Español</span>
+                            <i data-feather="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2023 BugBusters. Todos los derechos reservados.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacidad</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Términos</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Vanta.js background
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x6366f1,
+            backgroundColor: 0xf8fafc,
+            points: 10.00,
+            maxDistance: 23.00,
+            spacing: 19.00
+        });
+        
+        // Initialize feather icons
+        feather.replace();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
